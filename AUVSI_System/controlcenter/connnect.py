@@ -1,11 +1,11 @@
-from auvsi_suas.client import client
-from auvsi_suas.proto import interop_api_pb2
+import os
 
-def connect(URL,Userame,Password):
-    client = client.Client(url=URL,
-                        username=Userame,
-                        password=Password)
-    teams = client.get_teams()
-    mission = client.get_mission(1)
-    print(teams)
-    print(mission)
+def connect(URL,Username,Password):
+    cmd = "./tools/interop_cli.py  --url "
+    cmd += URL + " "
+    cmd += "--username "
+    cmd += Username + " "
+    cmd += "--password " 
+    cmd += Password + " "
+    cmd += "mission --mission_id 1"
+    print(cmd)
