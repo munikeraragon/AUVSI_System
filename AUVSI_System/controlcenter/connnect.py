@@ -8,4 +8,4 @@ def connect(URL,Userame,Password):
     teams = client.get_teams()
     mission = client.get_mission(1)
     print(teams)
-    print(mision)
+    print(mission)
