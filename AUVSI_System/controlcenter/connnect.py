@@ -1,7 +1,7 @@
 import os
 
 def connect(URL,Username,Password):
-    cmd = "./tools/interop_cli.py  --url "
+    cmd = "cd /interop/client && ./tools/interop_cli.py  --url "
     cmd += URL + " "
     cmd += "--username "
     cmd += Username + " "
