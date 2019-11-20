@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponseRedirect
 from .forms import InteropServerForm, MainPageForm
 from .models import InteropServer
+import json
 # Create your views here.
 
 def connectionPage(request):
@@ -29,5 +30,5 @@ def controlCenter(request):
     return render(request,'controlcenter/controlCenter.html',{'form': form})
 
 def getMission(request):
-    
-    return render(request,'controlcenter/get_mission.html',{})
+    jsonFile = json.loads(open('text.json').read())
+    return render(request,'controlcenter/get_mission.html',{'file': jsonFile})
