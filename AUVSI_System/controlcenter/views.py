@@ -27,3 +27,7 @@ def controlCenter(request):
     else:
         form = MainPageForm()
     return render(request,'controlcenter/controlCenter.html',{'form': form})
+
+def getMission(request):
+    
+    return render(request,'controlcenter/get_mission.html',{})

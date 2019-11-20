@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.connectionPage,name='connectionPage'),
     path('controlCenter',views.controlCenter,name='controlCenter'),
+    path('get_mission',views.getMission,name='mission'),
 ]

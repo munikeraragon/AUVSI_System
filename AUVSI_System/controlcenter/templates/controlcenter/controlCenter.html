@@ -13,22 +13,6 @@
     <title>Control Center</title>
   </head>
   <body>
-    <div id="navigation">
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Active</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-    </div>
     <div id="logo">
         <img src="{% static "img/aerospace_logo.jpg" %}" alt="logo">
     </div>
@@ -40,8 +24,12 @@
   <div class="container">
     <div class="row">
       <div class="col-sm">
+        <!-- GET Mission -->
+        
         <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+          <a href="{% url 'mission' %}">
           <div class="card-header">Get Mission</div>
+          </a>
           <div class="card-body">
             <h5 class="card-title">Primary card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -49,8 +37,11 @@
         </div>
       </div>
       <div class="col-sm">
+        <!-- Update Mission -->
         <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+          <a href="#">
           <div class="card-header">Upload Mission</div>
+          </a>
           <div class="card-body">
             <h5 class="card-title">Primary card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -58,8 +49,11 @@
         </div>
       </div>
       <div class="col-sm">
+        <!-- Plan Mission -->
         <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+          <a href="#">
           <div class="card-header">Plan mission</div>
+          </a>
           <div class="card-body">
             <h5 class="card-title">Primary card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>

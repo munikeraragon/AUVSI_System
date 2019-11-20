@@ -1,0 +1,124 @@
+
+{
+
+    "id": 1,
+
+    "flyZones": [
+
+      {
+
+        "altitudeMax": 750.0,
+
+        "altitudeMin": 0.0,
+
+        "boundaryPoints": [
+
+          {
+
+            "latitude": 38.142544,
+
+            "longitude": -76.434088
+
+          },
+
+          {
+
+            "latitude": 38.141833,
+
+            "longitude": -76.425263
+
+          },
+
+          {
+
+            "latitude": 38.144678,
+
+            "longitude": -76.427995
+
+          }
+
+        ]
+
+      }
+
+    ],
+
+    "searchGridPoints": [
+
+      {
+
+        "latitude": 38.142544,
+
+        "longitude": -76.434088
+
+      }
+
+    ],
+
+    "offAxisOdlcPos": {
+
+      "latitude": 38.142544,
+
+      "longitude": -76.434088
+
+    },
+
+    "waypoints": [
+
+      {
+
+        "latitude": 38.142544,
+
+        "altitude": 200.0,
+
+        "longitude": -76.434088
+
+      }
+
+    ],
+
+    "airDropPos": {
+
+      "latitude": 38.141833,
+
+      "longitude": -76.425263
+
+    },
+
+    "emergentLastKnownPos": {
+
+      "latitude": 38.145823,
+
+      "longitude": -76.422396
+
+    },
+
+    "stationaryObstacles": [
+
+      {
+
+        "latitude": 38.14792,
+
+        "radius": 150.0,
+
+        "longitude": -76.427995,
+
+        "height": 200.0
+
+      },
+
+      {
+
+        "latitude": 38.145823,
+
+        "radius": 50.0,
+
+        "longitude": -76.422396,
+
+        "height": 300.0
+
+      }
+
+    ]
+
+  }
