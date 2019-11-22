@@ -4,6 +4,7 @@ from .forms import InteropServerForm, MainPageForm
 from .models import InteropServer
 import json
 from .connect import connect
+from .parseJson import ParseJsonFile
 # Create your views here.
 
 def connectionPage(request):
@@ -34,5 +35,6 @@ def getMission(request):
     #connect("http://localhost:8000","testuser","testpass")
     server = InteropServer.objects.all()[0]
     #connect(server.url,server.username,server.password)
-    jsonFile = json.loads(open("C:\\Users\\santi\\Desktop\\AUVSI\\AUVSI_System\\AUVSI_System\\controlcenter\\text.json").read())
-    return render(request,'controlcenter/get_mission.html',{'file': jsonFile})
+    mission_file = ParseJsonFile("C:\\Users\\santi\\Desktop\\AUVSI\\AUVSI_System\\AUVSI_System\\controlcenter\\text.json")
+    way_points = mission_file.getWayPointList()
+    return render(request,'controlcenter/get_mission.html',{'file':mission_file})
