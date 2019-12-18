@@ -22,4 +22,5 @@ urlpatterns = [
     path('',views.connectionPage,name='connectionPage'),
     path('controlCenter',views.controlCenter,name='controlCenter'),
     path('get_mission',views.getMission,name='mission'),
+    path('boundaryGrid',views.boundaryGrid,name='boundaryGrid'),
 ]

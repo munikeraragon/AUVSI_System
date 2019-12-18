@@ -1,0 +1,16 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+#title{
+    height: 5%;
+}
+#map{
+    height:95%;
+}
+
+p{
+    text-align: center;
+    font-size: 25px;
+}

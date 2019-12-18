@@ -36,5 +36,11 @@ def getMission(request):
     server = InteropServer.objects.all()[0]
     #connect(server.url,server.username,server.password)
     mission_file = ParseJsonFile("C:\\Users\\santi\\Desktop\\AUVSI\\AUVSI_System\\AUVSI_System\\controlcenter\\text.json")
-    way_points = mission_file.getWayPointList()
     return render(request,'controlcenter/get_mission.html',{'file':mission_file})
+def boundaryGrid(request):
+    mission_file = ParseJsonFile("C:\\Users\\santi\\Desktop\\AUVSI\\AUVSI_System\\AUVSI_System\\controlcenter\\text.json")
+    boundaryList = mission_file.boundaryPointsList
+    newboundaryList = []
+    for dictionary in boundaryList:
+        newboundaryList.append({'lat': dictionary["latitude"],'lng':dictionary["longitude"]})
+    return render(request,'controlcenter/boundaryGrid.html',{'boundaryList':newboundaryList})
