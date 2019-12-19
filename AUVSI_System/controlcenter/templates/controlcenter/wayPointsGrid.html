@@ -21,10 +21,9 @@
 
     <script type="text/javascript">
       var missionFile = {{ mission|jsonify }};
-      var flyZonesDict = missionFile['flyZones'][0];
-      boundaryList = flyZonesDict['boundaryPoints'];
+      var wayPointList = missionFile['waypoints'];
       boundaryCoordinates = [];
-      for ( dictionary of boundaryList) {
+      for ( dictionary of wayPointList) {
         boundaryCoordinates.push({
           lat: dictionary['latitude'],
           lng: dictionary['longitude']

@@ -39,8 +39,13 @@ def getMission(request):
     return render(request,'controlcenter/get_mission.html',{'file':mission_file})
 def boundaryGrid(request):
     mission_file = ParseJsonFile("C:\\Users\\santi\\Desktop\\AUVSI\\AUVSI_System\\AUVSI_System\\controlcenter\\text.json")
-    boundaryList = mission_file.boundaryPointsList
-    newboundaryList = []
-    for dictionary in boundaryList:
-        newboundaryList.append({'lat': dictionary["latitude"],'lng':dictionary["longitude"]})
-    return render(request,'controlcenter/boundaryGrid.html',{'boundaryList':newboundaryList})
+    #boundaryList = mission_file.boundaryPointsList
+    #newboundaryList = []
+    #for dictionary in boundaryList:
+       # newboundaryList.append({'lat': dictionary["latitude"],'lng':dictionary["longitude"]})
+    #return render(request,'controlcenter/boundaryGrid.html',{'boundaryList':newboundaryList})
+    return render(request,'controlcenter/boundaryGrid.html',{'mission':mission_file.jsonFile})
+
+def wayPointsGrid(request):
+    mission_file = ParseJsonFile("C:\\Users\\santi\\Desktop\\AUVSI\\AUVSI_System\\AUVSI_System\\controlcenter\\text.json")
+    return render(request,'controlcenter/wayPointsGrid.html',{'mission':mission_file.jsonFile})
