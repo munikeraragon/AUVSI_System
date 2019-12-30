@@ -24,4 +24,5 @@ urlpatterns = [
     path('get_mission',views.getMission,name='mission'),
     path('boundaryGrid',views.boundaryGrid,name='boundaryGrid'),
     path('wayPointsGrid',views.wayPointsGrid,name='wayPointsGrid'),
+    path('completeMap',views.completeMap,name='completeMap'),
 ]

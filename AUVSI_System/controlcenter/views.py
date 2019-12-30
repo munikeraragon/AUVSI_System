@@ -49,3 +49,7 @@ def boundaryGrid(request):
 def wayPointsGrid(request):
     mission_file = ParseJsonFile("C:\\Users\\santi\\Desktop\\AUVSI\\AUVSI_System\\AUVSI_System\\controlcenter\\text.json")
     return render(request,'controlcenter/wayPointsGrid.html',{'mission':mission_file.jsonFile})
+
+def completeMap(request):
+    mission_file = ParseJsonFile("C:\\Users\\santi\\Desktop\\AUVSI\\AUVSI_System\\AUVSI_System\\controlcenter\\text.json")
+    return render(request,'controlcenter/completeMap.html',{'mission':mission_file.jsonFile}) 

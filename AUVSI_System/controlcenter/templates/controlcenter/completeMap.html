@@ -22,8 +22,10 @@
     <script type="text/javascript">
       var missionFile = {{ mission|jsonify }};
       var flyZonesDict = missionFile['flyZones'][0];
-      boundaryList = flyZonesDict['boundaryPoints'];
-      boundaryCoordinates = [];
+      
+      // build boundary coordinates
+      var boundaryList = flyZonesDict['boundaryPoints'];
+      var boundaryCoordinates = [];
       for ( dictionary of boundaryList) {
         boundaryCoordinates.push({
           lat: dictionary['latitude'],
@@ -31,7 +33,18 @@
         }
         )
       }
-      //console.log(boundaryCoordinates)
+      // build wayPoints coordinates
+      var wayPointList = missionFile['waypoints'];
+      var wayPointsCoordinates = [];
+      for ( dictionary of wayPointList) {
+        wayPointsCoordinates.push({
+          lat: dictionary['latitude'],
+          lng: dictionary['longitude']
+        }
+        )
+      }
+
+
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 15,
@@ -39,7 +52,7 @@
           mapTypeId: 'terrain'
         });
 
-        var flightPath = new google.maps.Polyline({
+        var boundaryPath = new google.maps.Polyline({
           path: boundaryCoordinates,
           geodesic: true,
           strokeColor: '#FF0000',
@@ -47,6 +60,16 @@
           strokeWeight: 2
         });
 
+        // create Polyline from way point coordinates
+        var flightPath = new google.maps.Polyline({
+          path: wayPointsCoordinates,
+          geodesic: true,
+          strokeColor: '#39349e',
+          strokeOpacity: 1.0,
+          strokeWeight: 2
+        });
+
+        boundaryPath.setMap(map);
         flightPath.setMap(map);
       }
     </script>
