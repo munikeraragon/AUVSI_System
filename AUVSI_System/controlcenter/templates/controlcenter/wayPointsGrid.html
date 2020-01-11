@@ -22,6 +22,28 @@
     </div>
     <div id="map"></div>
 
+    <!-- map Types drop down-->
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Map Types
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="{% url 'boundaryGrid' %}">
+          Boundary Grid
+        </a>
+        <a class="dropdown-item" href="{% url 'wayPointsGrid' %}">
+          Way Points Grid
+        </a>
+        <a class="dropdown-item" href="{% url 'completeMap' %}">
+          Complete Map
+        </a>
+        <a class="dropdown-item" href="{% url 'searchGrid' %}">
+          Search Grid
+        </a>
+      </div>
+    </div>
+    <!-- end map Types drop down-->
+
     <script type="text/javascript">
       var missionFile = {{ mission|jsonify }};
       var wayPointList = missionFile['waypoints'];

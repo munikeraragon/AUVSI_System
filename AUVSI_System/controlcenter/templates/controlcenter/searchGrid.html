@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- CSS -->
     <link href="{% static  'css/style.css' %}" rel="stylesheet">
-    <title>boundaryGrid!</title>
+    <title>searchGrid!</title>
   </head>
   <body>
     <div id="title">
-      <p>Boundary Grid</p>
+      <p>Search Grid</p>
     </div>
     <div id="map"></div>
 
@@ -40,34 +40,44 @@
       </div>
     </div>
     <!-- end map Types drop down-->
-
+    
     <script type="text/javascript">
       var missionFile = {{ mission|jsonify }};
-      var flyZonesDict = missionFile['flyZones'][0];
-      boundaryList = flyZonesDict['boundaryPoints'];
-      boundaryCoordinates = [];
-      for ( dictionary of boundaryList) {
-        boundaryCoordinates.push({
+      var searchPointList = missionFile['searchGridPoints'];
+      var searchPointCoordinates = [];
+      for ( dictionary of searchPointList) {
+        searchPointCoordinates.push({
           lat: dictionary['latitude'],
           lng: dictionary['longitude']
         }
         )
       }
-      //console.log(boundaryCoordinates)
+ 
       function initMap() {
+        // create map
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 15,
           center: {lat: 38.1462694444444, lng: -76.4281638888889},
           mapTypeId: 'terrain'
         });
 
+        // create Polyline from search grid coordinates
         var flightPath = new google.maps.Polyline({
-          path: boundaryCoordinates,
+          path: searchPointCoordinates,
           geodesic: true,
-          strokeColor: '#FF0000',
+          strokeColor: '#a207fa',
           strokeOpacity: 1.0,
           strokeWeight: 2
         });
+
+        // add a marker for each boundary coordinate
+        for(let coordinate of searchPointCoordinates){
+          var marker = new google.maps.Marker({
+          map: map,
+          draggable: true,
+          position: coordinate
+          });
+        }
 
         flightPath.setMap(map);
       }

@@ -25,4 +25,5 @@ urlpatterns = [
     path('boundaryGrid',views.boundaryGrid,name='boundaryGrid'),
     path('wayPointsGrid',views.wayPointsGrid,name='wayPointsGrid'),
     path('completeMap',views.completeMap,name='completeMap'),
+    path('searchGrid',views.searchGrid,name='searchGrid'),
 ]

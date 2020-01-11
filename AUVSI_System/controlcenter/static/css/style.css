@@ -33,3 +33,32 @@ p{
     line-height: 30px;
     padding-left: 10px;
   }
+
+
+  /* mapTypes floating-panel */
+  .dropdown{
+    position: absolute;
+    top: 52px;
+    right: 6%;
+  }
+#dropdownMenuButton{
+    font-size: 1.1rem;
+    font-weight: 500;  
+  }
+
+.btn-secondary {
+    color: #52565b;
+    background-color:#fff;
+    border-color:#6c757d;
+}
+
+.btn-secondary:hover {
+    color:#282525;
+    background-color:#d8dbde;
+    border-color:#545b62;
+}
+
+.dropdown-menu a{
+  text-decoration: none !important;
+} 
+/* end mapTypes floating-panel */
