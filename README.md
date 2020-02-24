@@ -3,9 +3,9 @@
 Front-end and Back-end end system that will be utilized to partcipate in the [AUVSI Student Unmanned Aerial System Competition](https://www.auvsi-suas.org/).
 
 ### Table of contents
-- Description
-- System layout
-- Completion status
+- [Description](#Description)
+- [System Layout](#System_Layout)
+- [Completion Status](#Completion_Status)
 
 ## Description
 This is the developed system that will be utilized by the Clark college's Aerospace clut to participate in the AUVSI-SUAS competion.
@@ -19,7 +19,7 @@ This is the developed system that will be utilized by the Clark college's Aerosp
 
 
 
-## System_layout
+## System_Layout
 AUVSI_System
  <p style="text-indent: 40px">Control Center</p>
  <p style="text-indent: 60px">-templates/controlcenter<br>
@@ -45,7 +45,7 @@ AUVSI_System
 
 
 
-## Completion_status
+## Completion_Status
 #### Completed
 ##### Front end
 - Develop Main page interface
