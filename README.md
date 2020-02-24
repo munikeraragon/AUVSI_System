@@ -29,10 +29,10 @@ AUVSI_System
             -get_mission.html
 
             The files below incorporate js scripts to communicate with Google Maps API
-            -boundaryGrid.html</p>
-            -completeMap.html</p>
-            -searchGrid.html</p>
-            -wayPointsGrid.html</p>
+            -boundaryGrid.html
+            -completeMap.html
+            -searchGrid.html
+            -wayPointsGrid.html
 
         -models.py: Entity model that will store InteropServer conneciton info. 
         -connect.py: Performs system call  to Interop Server and request a mission file.
