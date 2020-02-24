@@ -20,26 +20,24 @@ This is the developed system that will be utilized by the Clark college's Aerosp
 
 
 ## System_Layout
+<pre>
 AUVSI_System
- <p style="text-indent: 40px">Control Center</p>
- <p style="text-indent: 60px">-templates/controlcenter<br>
+  /controlcenter
+        templates/controlcenter
+            -controlCenter.html
+            -startConnection.html
+            -get_mission.html
 
- <p style="text-indent: 100px"> -controlCenter.html</p>
- <p style="text-indent: 100px"> -startConnection.html</p>
- <p style="text-indent: 100px"> -get_mission.html</p>
+            The files below incorporate js scripts to communicate with Google Maps API
+            -boundaryGrid.html</p>
+            -completeMap.html</p>
+            -searchGrid.html</p>
+            -wayPointsGrid.html</p>
 
- <p style="text-indent: 100px"> The files below incorporate js scripts to communicate with Google Maps API</p>
- <p style="text-indent: 100px"> -boundaryGrid.html</p>
- <p style="text-indent: 100px"> -completeMap.html</p>
- <p style="text-indent: 100px"> -searchGrid.html</p>
- <p style="text-indent: 100px"> -wayPointsGrid.html</p>
-
- </p>
- 
- <p style="text-indent: 60px">-models.py: Entity model that will store InteropServer conneciton info. </p>
- <p style="text-indent: 60px">-connect.py: Performs system call  to Interop Server and request a mission file.</p>
- <p style="text-indent: 60px">-views.py: Controls the logic to handle various interface views.</p>
- 
+        -models.py: Entity model that will store InteropServer conneciton info. 
+        -connect.py: Performs system call  to Interop Server and request a mission file.
+        -views.py: Controls the logic to handle various interface views.
+ </pre>
 
 
 
