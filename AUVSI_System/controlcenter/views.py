@@ -37,7 +37,7 @@ def getMission(request):
     server = InteropServer.objects.all()[0]
     # sends request to server to mission file
     #connect(server.url,server.username,server.password) 
-    mission_file = ParseJsonFile("C:\\Users\\santi\\Desktop\\Projects\\AUVSI_System\\AUVSI_System\\controlcenter\\text.json")
+    mission_file = ParseJsonFile('/home/muniker/Desktop/AUVSI_System/AUVSI_System/controlcenter/text.json')
     maxAltitude = mission_file.altitudeMax
     minAltitude = mission_file.altitudeMin
     wayPointsDict = constructDict(mission_file.wayPointsList, 3)
@@ -65,17 +65,17 @@ def constructDict(list, columns):
 
 
 def boundaryGrid(request):
-    mission_file = ParseJsonFile("C:\\Users\\santi\\Desktop\\Projects\\AUVSI_System\\AUVSI_System\\controlcenter\\text.json")
+    mission_file = ParseJsonFile('/home/muniker/Desktop/AUVSI_System/AUVSI_System/controlcenter/text.json')
     return render(request,'controlcenter/boundaryGrid.html',{'mission':mission_file.jsonFile})
 
 def wayPointsGrid(request):
-    mission_file = ParseJsonFile("C:\\Users\\santi\\Desktop\\Projects\\AUVSI_System\\AUVSI_System\\controlcenter\\text.json")
+    mission_file = ParseJsonFile('/home/muniker/Desktop/AUVSI_System/AUVSI_System/controlcenter/text.json')
     return render(request,'controlcenter/wayPointsGrid.html',{'mission':mission_file.jsonFile})
 
 def completeMap(request):
-    mission_file = ParseJsonFile("C:\\Users\\santi\\Desktop\\Projects\\AUVSI_System\\AUVSI_System\\controlcenter\\text.json")
+    mission_file = ParseJsonFile('/home/muniker/Desktop/AUVSI_System/AUVSI_System/controlcenter/text.json')
     return render(request,'controlcenter/completeMap.html',{'mission':mission_file.jsonFile})
 
 def searchGrid(request):
-    mission_file = ParseJsonFile("C:\\Users\\santi\\Desktop\\Projects\\AUVSI_System\\AUVSI_System\\controlcenter\\text.json")
+    mission_file = ParseJsonFile('/home/muniker/Desktop/AUVSI_System/AUVSI_System/controlcenter/text.json')
     return render(request,'controlcenter/searchGrid.html',{'mission':mission_file.jsonFile})
